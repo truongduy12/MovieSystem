@@ -1,0 +1,203 @@
+@startuml
+skinparam groupinheritance 2
+'skinparam linetype polyline
+left to right direction
+
+interface IMenu {
++ ChooseMenu(): string
++ ShowMenu(): string
+}
+
+interface IView {
++ View(): void
+}
+
+interface IMovie {
++ ID: int
++ Name: string 
++ Price: double
++ Nation: string 
++ Duration: int 
++ Publish: DateTime
++ Status: bool
++ Add(): IMovie
++ Update(): void
++ Delete(): void
++ Restore(): void
+}
+
+IMovie <|-- Movie
+
+class FeatureFilmMenu {
+- IdFinder: IFind
+- NameFinder: IFind
+- NationFinder: IFind
+- DeletedFinder: IFind
+- DefaultView: IView
+- DeletedView: IView
+- PriceInsView: IView
+- PriceDesView: IView
++ ShowMenu(): void
++ ChooseMenu(): string
+}
+
+class TVSeriesMenu {
+- IdFinder: IFind
+- NameFinder: IFind
+- NationFinder: IFind
+- DeletedFinder: IFind
+- DefaultView: IView
+- DeletedView: IView
+- PriceInsView: IView
+- PriceDesView: IView
++ ShowMenu(): void
++ ChooseMenu(): string
+}
+
+abstract class Movie {
++ ID: int
++ Name: string 
++ Price: double
++ Nation: string 
++ Duration: int 
++ Publish: DateTime
++ Status: bool
++ Add(): IMovie
++ Update(): void
++ Delete(): void
++ Restore(): void
++ {static} Message(): void
++ {abstract} ToString(): string
+}
+
+class ChapterMenu {
++ ChapterMenu()
++ ShowMenu(): void
++ ChooseMenu(): string
+- IdFinder: IFind
+- NameFinder: IFind
+- DeletedFinder: IFind
+- DefaultView: IView
+- DeletedView: IView
+- _thisSeries: TVSeries
+- _listChapter: List<IMovie>
+}
+
+class MainMenu {
++ ShowMenu(): void
++ ChooseMenu(): string
+
+}
+
+class DefaultView {
++ View(): void
+}
+
+class DeletedView {
++ View(): void
+}
+
+class PriceDesView {
++ View(): void
+}
+
+class PriceInsView {
++ View(): void
+}
+
+IView <|-- PriceInsView
+IView <|-- PriceDesView
+IView <|-- DeletedView
+IView <|-- DefaultView
+
+class DeletedFind {
++ Find(): List<IMovie>
+}
+
+class IDFind {
++ Find(): List<IMovie>
+}
+
+class NameFind{
++ Find(): List<IMovie>
+}
+
+class NationFind {
++ Find(): List<IMovie>
+}
+
+interface IFind {
++ Find(): List<IMovie>
+}
+
+IFind <|-- NationFind
+IFind <|-- NameFind
+IFind <|-- IDFind
+IFind <|-- DeletedFind
+
+IMenu <|--- ChapterMenu
+IMenu <|-- FeatureFilmMenu
+IMenu <|-- TVSeriesMenu
+IMenu <|-- MainMenu
+
+class MovieCreator {
++ Movie: IMovie
++ MovieCreator()
++ Create(): Movie
++ MovieInfo: MovieInfo
++ PublishInfo: PublishInfo
+}
+
+class MovieInfo {
++ MovieInfo()
++ SetName(): MovieInfo
++ SetPrice(): MovieInfo
++ SetDuration(): MovieInfo
++ SetStatus(): MovieInfo
+}
+
+class PublishInfo {
++ PublishInfo()
++ SetNation(): PublishInfo
++ SetPublishDate(): PublishInfo
+}
+
+MovieCreator <|-- MovieInfo
+MovieCreator <|-- PublishInfo
+
+class Chapter {
++ Add(): IMovie
++ Update(): void
++ ToString(): string
+}
+
+TVSeries <|-- Chapter
+IMovie - MovieCreator : Create <
+
+class FeatureFilm {
++ ToString: string 
+}
+
+class TVSeries {
++ ListChapter: List<IMovie>
+- GetTotalPrice(): double
+- GetTotalChapters(): int
++ ToString(): string
+}
+
+Movie <|-- FeatureFilm
+Movie <|-- TVSeries
+
+class Program {
++ {static} ListFeatureFilms: List<IMovie>
++ {static} ListTVSeries: List<IMovie>
++ {static} Main(): void
+}
+
+Movie -- IFind : > Use 
+Movie -- IView : > Use
+
+IMenu - Program : Use <
+Program - IMovie : Use >
+
+@enduml

@@ -1,0 +1,13 @@
+/media/truongduy12/Data/AdvancedProgramming/AS/obj/Debug/netcoreapp3.1/AS.csprojAssemblyReference.cache
+/media/truongduy12/Data/AdvancedProgramming/AS/obj/Debug/netcoreapp3.1/AS.AssemblyInfoInputs.cache
+/media/truongduy12/Data/AdvancedProgramming/AS/obj/Debug/netcoreapp3.1/AS.AssemblyInfo.cs
+/media/truongduy12/Data/AdvancedProgramming/AS/obj/Debug/netcoreapp3.1/AS.csproj.CoreCompileInputs.cache
+/media/truongduy12/Data/AdvancedProgramming/AS/bin/Debug/netcoreapp3.1/AS
+/media/truongduy12/Data/AdvancedProgramming/AS/bin/Debug/netcoreapp3.1/AS.deps.json
+/media/truongduy12/Data/AdvancedProgramming/AS/bin/Debug/netcoreapp3.1/AS.runtimeconfig.json
+/media/truongduy12/Data/AdvancedProgramming/AS/bin/Debug/netcoreapp3.1/AS.runtimeconfig.dev.json
+/media/truongduy12/Data/AdvancedProgramming/AS/bin/Debug/netcoreapp3.1/AS.dll
+/media/truongduy12/Data/AdvancedProgramming/AS/bin/Debug/netcoreapp3.1/AS.pdb
+/media/truongduy12/Data/AdvancedProgramming/AS/obj/Debug/netcoreapp3.1/AS.dll
+/media/truongduy12/Data/AdvancedProgramming/AS/obj/Debug/netcoreapp3.1/AS.pdb
+/media/truongduy12/Data/AdvancedProgramming/AS/obj/Debug/netcoreapp3.1/AS.genruntimeconfig.cache

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "TLWTUSDXAoPL3b9gUyva8Aryg7yyuhY1QW0tBNsl3w5+wLrxpznHuGlhPJpiLH/yXHVRR5exHSUG4Lindtm2TQ==",
+  "success": true,
+  "projectFilePath": "/media/truongduy12/Data/AdvancedProgramming/AS/AS.csproj",
+  "expectedPackageFiles": [
+    "/home/truongduy12/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "/home/truongduy12/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.0/microsoft.aspnetcore.app.ref.3.1.0.nupkg.sha512",
+    "/home/truongduy12/.nuget/packages/microsoft.netcore.app.host.linux-x64/3.1.0/microsoft.netcore.app.host.linux-x64.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
